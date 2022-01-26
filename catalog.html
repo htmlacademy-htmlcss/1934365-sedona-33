@@ -7,7 +7,7 @@
   <body>
     <header class="page-header">
         <nav class="navigation">
-          <p class="visually-hidden"><a class="navigation-link" href="index.html">Логотип</a></p>
+          <a class="navigation-link" href="#"><span class="visually-hidden">Логотип</span></a>
           <ul class="navigation-list">
             <li class="navigation-item"><a class="navigation-link" href="index.html">Главная</a></li>
             <li class="navigation-item"><a class="navigation-link" href="#">О Седоне</a></li>
@@ -21,8 +21,7 @@
         </nav>
       </header>
       <main class="main-inner">
-          <header class=inner-header>
-              <h1 class="inner-header-title">Гостиницы Седоны</h1>
+            <h1 class="inner-header-title">Гостиницы Седоны</h1>
               <ul class="breadcrumbs">
                   <li class="breadcrumbs-item">
                       <a class="breadcrumbs-link" href="index.html">
@@ -33,8 +32,7 @@
                       <a class="breadcrumbs-link">Гостиницы</a>
                   </li>
               </ul>
-          </header>
-          <section class="filters">
+              <section class="filters">
               <h2 class="filters-title">
                   <span class="visually-hidden">Фильтры</span>
               </h2>
@@ -85,7 +83,10 @@
                 <button class="button" type="submit">Применить</button>
                 <button class="button button-reset" type="button">Сбросить</button>
               </form>
-              <select class="select-control" area-label="Сортировка">
+              <p class="filters-description-hotels-number">Найдено гостиниц: 
+                  <span class="filters-description-hotels-number">38</span>
+              </p>
+              <select class="select-control" aria-label="Сортировка">
                   <option value="cheap">Сначала дешёвые</option>
                   <option value="rich">Сначала дорогие</option>
                   <option value="popular">Сначала популярные</option>
@@ -101,47 +102,77 @@
             </a>
           </section>
           <section class="hotels">
+              <h2 class="hotels-title visually-hidden">Список гостиниц</h2>
               <ul class="hotels-list">
               <li class="hotels-item">
                   <a class="hotels-link" href=""></a>
                   <img class="hotels-image" src="" alt="Гостиница Amara Resort & Spa">
-                  <h2 class="hotels-title">Amara Resort & Spa</h2>
+                  <h3 class="hotels-title">Amara Resort & Spa</h3>
                   <span class="hotels-description">Гостиница</span>
                   <span class="hotels-price">От 4000 ₽</span>
                   <a class="button button-hotels-link" href="">подробнее</a>
                   <a class="button button-hotels-link-favorite" href="">В избранное</a>
-                  <p class="hotels-rate">Рейтинг: 8,5</p>
+                  <fieldset class="rating-group">
+                      <input type="radio" name="rating-amara" value="1" aria-label="Ужасно">
+                      <input type="radio" name="rating-amara" value="2" aria-label="Плохо">
+                      <input type="radio" name="rating-amara" value="3" aria-label="Нормально">
+                      <input type="radio" name="rating-amara" value="4" aria-label="Хорошо" checked>
+                      <input type="radio" name="rating-amara" value="5" aria-label="Отлично">
+                      <p class="hotels-rate">Рейтинг: 8,5</p>
+                  </fieldset>
               </li>
               <li class="hotels-item">
                 <a class="hotels-link" href=""></a>
                 <img class="hotels-image" src="" alt="Гостиница Desert Quail Inn">
-                <h2 class="hotels-title">Desert Quail Inn</h2>
+                <h3 class="hotels-title">Desert Quail Inn</h3>
                 <span class="hotels-description">Гостиница</span>
                 <span class="hotels-price">От 3000 ₽</span>
                 <a class="button button-hotels-link" href="">подробнее</a>
                 <a class="button button-hotels-link-favorite" href="">В избранное</a>
-                <p class="hotels-rate">Рейтинг: 8,9</p>
+                <fieldset class="rating-group">
+                    <input type="radio" name="rating-desert" value="1" aria-label="Ужасно">
+                    <input type="radio" name="rating-desert" value="2" aria-label="Плохо">
+                    <input type="radio" name="rating-desert" value="3" aria-label="Нормально" checked>
+                    <input type="radio" name="rating-desert" value="4" aria-label="Хорошо">
+                    <input type="radio" name="rating-desert" value="5" aria-label="Отлично">
+                    <p class="hotels-rate">Рейтинг: 8,9</p>
+                </fieldset>
             </li>
             <li class="hotels-item">
                 <a class="hotels-link" href=""></a>
                 <img class="hotels-image" src="" alt="Гостиница Villas at Poco Diablo">
-                <h2 class="hotels-title">Villas at Poco Diablo</h2>
+                <h3 class="hotels-title">Villas at Poco Diablo</h3>
                 <span class="hotels-description">Гостиница</span>
                 <span class="hotels-price">От 2000 ₽</span>
                 <a class="button button-hotels-link" href="">подробнее</a>
                 <a class="button button-hotels-link-favorite" href="">В избранном</a>
-                <p class="hotels-rate">Рейтинг: 9,2</p>
+                <fieldset class="rating-group">
+                    <input type="radio" name="rating-diablo" value="1" aria-label="Ужасно">
+                    <input type="radio" name="rating-diablo" value="2" aria-label="Плохо" checked>
+                    <input type="radio" name="rating-diablo" value="3" aria-label="Нормально">
+                    <input type="radio" name="rating-diablo" value="4" aria-label="Хорошо">
+                    <input type="radio" name="rating-diablo" value="5" aria-label="Отлично">
+                    <p class="hotels-rate">Рейтинг: 9,2</p>
+                </fieldset>
             </li>
             <li class="hotels-item">
                 <a class="hotels-link" href=""></a>
                 <img class="hotels-image" src="" alt="Гостиница GreenTree Inn">
-                <h2 class="hotels-title">GreenTree Inn</h2>
+                <h3 class="hotels-title">GreenTree Inn</h3>
                 <span class="hotels-description">Гостиница</span>
                 <span class="hotels-price">От 3000 ₽</span>
                 <a class="button button-hotels-link" href="">подробнее</a>
                 <a class="button button-hotels-link-favorite" href="">В избранное</a>
-                <p class="hotels-rate">Рейтинг: 9,2</p>
+                <fieldset class="rating-group">
+                    <input type="radio" name="rating-greentree" value="1" aria-label="Ужасно">
+                    <input type="radio" name="rating-greentree" value="2" aria-label="Плохо" checked>
+                    <input type="radio" name="rating-greentree" value="3" aria-label="Нормально">
+                    <input type="radio" name="rating-greentree" value="4" aria-label="Хорошо">
+                    <input type="radio" name="rating-greentree" value="5" aria-label="Отлично">
+                    <p class="hotels-rate">Рейтинг: 9,2</p>
+                </fieldset>
             </li>
+            </ul>
             <a class="button button-hotels-link-more" href="">Загрузить ещё</a>
             <ul class="pagination">
                 <li class="pagination-item">
@@ -204,11 +235,11 @@
             </section>
             <section class="contacts">
                 <h2 class="contacts-title">Контакты</h2>
-              <p class="contacts-tel">+7 (812) 812-12-12</p>
+              <a class="contacts-tel" href="tel:+78128121212">+7 (812) 812-12-12</a>
             </section>
             <section class="footer-logo">
-                <h2 class="footer-logo-title">Логотип</h2>
-              <p class="footer-logo">.html academy</p>
+                <h2 class="footer-logo-title visually-hidden">Логотип</h2>
+          <img class="footer-logo-image" src="" alt="логотип HTML Academy">
             </section>
             </footer>
 
