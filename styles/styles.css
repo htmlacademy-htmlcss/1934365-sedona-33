@@ -51,7 +51,19 @@ body {
     line-height: 21px;
     color: #000000;
     background-color: #ffffff;
+}
 
+/* visually-hidden*/
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 /* page */
@@ -64,8 +76,11 @@ body {
 
 .navigation-list,
 .navigation-user {
+    display: flex;
+    flex-wrap: wrap;
     margin: 0;
     padding: 0;
+    list-style-type: none;
 }
 
 .navigation-user {
@@ -76,27 +91,49 @@ body {
 .navigation-list {
     width: 460px;
 }
+
 .navigation-link {
+    display: block;
     font-size: 20px;
     line-height: 26px;
     font-weight: 700;
     text-align: center;
     text-decoration: none;
     color: inherit;
+    padding: 20px 17px;
+}
+
+.navigation-user-link {
+    display: block;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 24px 12px; 
+    min-width: 18px;
+    min-height: 18px;
 }
 
 .greeting {
     background-image: url("../images/main-page/index-background.jpg");
     background-size: 100% auto;
     background-repeat: no-repeat;
+    margin-bottom: 63px;
 }
 
 .greeting-image {
     display: block;
     margin: 0 auto;
+    padding-top: 51px;
+    padding-bottom: 25px;
 }
+
 .reasons-description-first,
 .search-description-first {
+    margin: 0;
+    padding: o;
     font-size: 30px;
     line-height: 36px;
     font-weight: 700;
@@ -104,15 +141,28 @@ body {
     text-align: center;
 }
 
+.reasons-description-first {
+    margin-bottom: 23px;
+}
+
 .reasons-description-second {
+    margin: 0;
+    padding: 0;
     font-size: 22px;
     line-height: 36px;
     text-align: center;
+    margin-bottom: 79px;
 }
+
+.search-description-first {
+    margin-bottom: 15px;
+}
+
 .search-description-second {
     font-size: 22px;
     line-height: 26px;
     text-align: center;
+    margin-bottom: 71px;
 }
 
 .reasons-list {
@@ -124,15 +174,44 @@ body {
     line-height: 21px;
     text-align: center;
     list-style-type: none;
+    margin-bottom: 91px;
 }
 
 .reasons-title,
 .advantages-title {
+    margin: 0;
+    padding: 0;
     font-size: 24px;
     line-height: 28px;
     font-weight: 700;
     text-transform: uppercase;
     text-align: center;
+}
+
+.reasons-title {
+    margin-top: 98px;
+    margin-bottom: 25px;
+}
+
+.advantages-title {
+    margin-top: 184px;
+    margin-bottom: 20px;
+}
+
+.advantages-description {
+    margin: 0;
+    margin-bottom: 79px;
+}
+
+.reasons-number {
+    display: block;
+    margin-bottom: 26px;
+}
+
+.reasons-description {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 77px;
 }
 
 .reasons-item-img,
@@ -218,6 +297,7 @@ input {
     background-image: url("../images/main-page/background-mail.jpg");
     background-size: 100% auto;
     background-repeat: no-repeat;
+    padding-top: 94px;
 }
 
 .subscribe-title {
@@ -227,6 +307,8 @@ input {
     text-transform: uppercase;
     color: #ffffff;
     text-align: center;
+    margin: 0;
+    margin-bottom: 15px;
 }
 
 .subscribe-description {
@@ -234,6 +316,8 @@ input {
     line-height: 26px;
     color: #ffffff;
     text-align: center;
+    margin: 0;
+    margin-bottom: 26px;
 }
 
 .subscribe-button {
@@ -248,6 +332,7 @@ input {
 .subscribe-wrapper {
     display: flex;
     justify-content: center;
+    padding-bottom: 94px;
 }
 
 input[type="email"] {
@@ -261,6 +346,7 @@ input[type="email"] {
     margin: 0 auto;
     width: 575px;
     text-align: center;
+    margin-bottom: 93px;
 }
 .contacts-tel {
     font-size: 40px;
@@ -275,20 +361,42 @@ input[type="email"] {
 }
 
 .social {
-    width: 107px;
-    margin-right: 61px;
-    margin-left: 72px;
+    width: 240px;
+    padding-left: 72px;
+}
+
+.social-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 49px;
+    margin-bottom: 53px;
+}
+
+.social-item {
+    min-width: 18px;
+    min-height: 15px;
+}
+
+.social-item:not(:last-child) {
+    margin-right: 29px;
 }
 
 .contacts {
     width: 720px;
     margin-right: 53px;
     text-align: center;
+    padding-top: 40px;
+    padding-bottom: 30px;
 }
 
 .footer-logo {
     width: 115px;
     margin-right: 72px;
+    padding-top: 42px;
+    padding-bottom: 44px;
 }
 /* Catalog*/
 
@@ -300,6 +408,10 @@ input[type="email"] {
     background-image: url("../images/catalog/filters.jpg");
     background-size: 100% auto;
     background-repeat: no-repeat;
+    padding-top: 35px;
+    padding-left: 71px;
+    padding-bottom: 48px;
+    margin-bottom: 44px;
 }
 
 .button {
@@ -331,14 +443,25 @@ input[type="email"] {
 .inner-title {
     font-size: 40px;
     line-height: 78px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
 }
 
 .breadcrumbs {
     display: flex;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 45px;
 }
 .breadcrumbs-link {
     font-size: 16px;
     line-height: 21px;
+}
+
+.breadcrumbs-item:not(:last-child) {
+    margin-right: 26px;
 }
 
 .filters-wrapper {
@@ -346,9 +469,24 @@ input[type="email"] {
 }
 
 .filters-group-infrastructure {
+    margin: 0;
+    padding: 0;
     width: 150px;
-    margin-left: 72px;
     margin-right: 67px;
+}
+
+.filters-group-title {
+    margin-bottom: 30px;
+}
+
+.filters-group-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.filters-group-item:not(:last-child) {
+    margin-bottom: 13px;
 }
 
 .filters-group-housing {
@@ -373,36 +511,57 @@ input[type="email"] {
 
 .search-wrapper {
     display: flex;
+    margin-left: 72px;
+    margin-right: 71px;
+    margin-bottom: 53px;
 }
+
 .filters-description-hotels-number {
+    margin: 0;
+    padding: 0;
     font-size: 30px;
     line-height: 39px;
     font-weight: 700;
     text-transform: uppercase; 
     width: 338px;
-    margin-left: 71px;
     margin-right: 191px; 
 }
 
 .select-control {
     width: 287px;
-    margin-right: 97px; 
+    height: 48px;
+    margin: 0 auto;
 }
 
 .navigation-image-wrapper {
-    width: 160px;
-    margin-left: auto; 
+    display: flex;
+    flex-wrap: wrap; 
 }
 
 .button-list {
     border: 1px solid #000000;
     background-color: transparent;
+    margin-right: 8px;
+    padding: 17px 16px;
+}
+
+.button-list:last-child {
+    margin-right: 0;
+}
+
+.hotels {
+    margin-bottom: 30px;
 }
 
 .hotels-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    margin-left: 71px;
+    margin-right: 71px;
 }
 
 .hotels-title {
@@ -434,6 +593,7 @@ input[type="email"] {
     width: 620px;
     margin: 0 auto;
     text-align: center;
+    margin-bottom: 60px;
 }
 
 .pagination {
@@ -442,12 +602,15 @@ input[type="email"] {
     display: flex;
     width: 368px;
     margin-left: 73px;
-}
-.pagination-container {
-    display: flex;
+    list-style-type: none;
 }
 
-.pagination-item {
+.pagination-container {
+    display: flex;
+    margin-bottom: 90px;
+}
+
+.pagination-item:not(:last-child) {
     width: 55px;
     margin-right: 7px;
 }
@@ -464,6 +627,10 @@ input[type="email"] {
     width: 160px;
 }
 .pagination-link {
+    display: block;
+    width: 55px;
+    height: 55px;
+    text-align: center;
     font-weight: 700;
     color: #ffffff;
     background-color: #83B3D3;
@@ -474,4 +641,28 @@ input[type="email"] {
     color: #000000;
     font-weight: 700;
     background-color: #F2F2F2;
+}
+
+.subscribe-wrapper-inner {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 140px;
+}
+
+.subscribe-title-inner {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.subscribe-description-inner {
+    font-size: 22px;
+    line-height: 26px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 26px;
 }
