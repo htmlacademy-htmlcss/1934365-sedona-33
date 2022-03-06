@@ -34,6 +34,7 @@ font-display: swap;
 
 html {
     height: 100%;
+    background-color: #F2F2F2;
 }
 
 .main-container {
@@ -51,6 +52,7 @@ body {
     line-height: 21px;
     color: #000000;
     background-color: #ffffff;
+    box-shadow: 0px 0px 15px rgb(0 0 0 / 20%);
 }
 
 /* visually-hidden*/
@@ -133,7 +135,7 @@ body {
     content: "12";
     font-family: PT Sans;
     font-size: 10px;
-    line-height: 13px;
+    line-height: 19px;
     color: #FFFFFF;
     width: 19px;
     height: 19px;
@@ -454,41 +456,6 @@ body {
     margin-bottom: 18px;
 }
 
-.subscribe-button {
-    font-family: "PT Sans", sans-serif;
-    font-size: 20px;
-    line-height: 26px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #ffffff;
-    background-color: #83B3D3;
-    padding: 17px;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-}
-
-.subscribe-button:hover {
-    background-color: #68A2CA;
-}
-
-.subscribe-button:focus {
-    background-color: #68A2CA;
-    outline: 3px solid #756257;
-}
-
-.subscribe-button:active {
-    background-color: #68A2CA;
-    color: rgba(255, 255, 255, 0.3)
-}
-
-.subscribe-wrapper {
-    display: grid;
-    grid-template-columns: 600px 200px;
-    padding-bottom: 94px;
-    justify-content: center;
-    align-items: center;
-}
-
 input[type="email"] {
     font-family: "PT Sans", sans-serif;
     font-size: 18px;
@@ -498,7 +465,7 @@ input[type="email"] {
     width: 100%;
     padding: 0;
     padding-top: 18px;
-    padding-bottom: 16px;
+    padding-bottom: 18px;
     padding-left: 21px;
     border: none;
     border-bottom-left-radius: 10px;
@@ -644,18 +611,19 @@ input[type="email"]:invalid {
     background-repeat: no-repeat;
     padding-top: 35px;
     padding-left: 71px;
-    padding-bottom: 36px;
+    padding-bottom: 77px;
     margin-bottom: 45px;
 }
 
 .button {
     display: block;
     font-size: 16px;
-    line-height: 21px;
+    line-height: 20.7px;
     font-weight: 700;
     color: #ffffff;
     background-color: #83B3D3;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
 .button-navigation-link {
@@ -707,13 +675,15 @@ input[type="email"]:invalid {
 }
 
 .button-hotels-link-favorite {
-    width: 133px;
+    width: 141px;
     border-radius: 4px;
     padding-top: 9px;
     padding-bottom: 10px;
     box-sizing: border-box;
     text-align: center;
     margin-left: auto;
+    grid-area: 5/3/6/4;
+    margin-bottom: 16px;
 }
 
 .button-submit {
@@ -721,12 +691,13 @@ input[type="email"]:invalid {
     font-weight: bold;
     font-size: 16px;
     line-height: 21px;
-    padding: 14px 35px;
+    padding: 14px 36px;
     margin: 0;
-    margin-top: 57px;
+    margin-top: 61px;
     margin-bottom: 10px;
     border-radius: 10px;
     text-align: center;
+    border: none;
 }
 
 .button-submit:focus {
@@ -737,13 +708,14 @@ input[type="email"]:invalid {
 
 .button-submit:hover {
     background: #68A2CA;
+    outline: none;
 }
 
 .button-submit:active {
     background: #68A2CA;
-    color: rgba(255, 255, 255, 0.3)
+    color: rgba(255, 255, 255, 0.3);
+    outline: none;
 }
-
 
 .button-reset:focus {
     outline: 3px solid #83B3D3;  
@@ -771,6 +743,41 @@ input[type="email"]:invalid {
     border: none;
 }
 
+.subscribe-button {
+    font-family: "PT Sans", sans-serif;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ffffff;
+    background-color: #83B3D3;
+    padding: 16px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.subscribe-button:hover {
+    background-color: #68A2CA;
+}
+
+.subscribe-button:focus {
+    background-color: #68A2CA;
+    outline: 3px solid #756257;
+}
+
+.subscribe-button:active {
+    background-color: #68A2CA;
+    color: rgba(255, 255, 255, 0.3)
+}
+
+.subscribe-wrapper {
+    display: grid;
+    grid-template-columns: 600px 200px;
+    padding-bottom: 94px;
+    justify-content: center;
+    align-items: center;
+}
+
 .inner-title {
     font-size: 60px;
     line-height: 78px;
@@ -782,14 +789,17 @@ input[type="email"]:invalid {
     display: flex;
     margin: 0;
     padding: 0;
-    margin-bottom: 45px;
+    margin-bottom: 44px;
     margin-top: -8px;
+    margin-left: -4px;
 }
 
 .breadcrumbs-link {
     width: 12px;
     height: 12px;
     padding: 3px 7px 3px 6px;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .breadcrumbs-item {
@@ -833,26 +843,46 @@ input[type="email"]:invalid {
     outline: none;
 }
 
+.breadcrumbs-link-icon::after {
+    position: absolute;
+    content: "";
+    background-image: url(../images/catalog/nav-link.svg);
+    width: 5px;
+    height: 8px;
+    top: 10px;
+    right: 1px;
+}  
+
 .filters-wrapper {
     display: flex;
 }
 
- /* .breadcrumbs-item::after {
-    position: absolute;
-    background-image: url(../images/catalog/nav-link.svg);
-    width: 5px;
-    height: 8px;
-}  */
+.filters-group-infrastructure,
+.filters-group-housing,
+.filters-group-price {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
 
 .filters-group-infrastructure {
     margin: 0;
     padding: 0;
-    width: 150px;
-    margin-right: 67px;
+    width: 199px;
+    margin-right: 20px;
 }
 
 .filters-group-title {
-    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 26px; 
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 29px;
+}
+
+.filters-group-title-price {
+    margin-bottom: 35px;
 }
 
 .filters-group-list {
@@ -862,12 +892,12 @@ input[type="email"]:invalid {
 }
 
 .filters-group-item:not(:last-child) {
-    margin-bottom: 13px;
+    margin-bottom: 12px;
 }
 
 .filters-group-housing {
-    width: 144px;
-    margin-right: 167px;
+    width: 296px;
+    margin-right: 20px;
 }
 
 .filters-group-price {
@@ -875,14 +905,162 @@ input[type="email"]:invalid {
     margin-right: 81px;
 }
 
+.control,
+.control-radio {
+    position: relative;
+    display: block;
+    padding-left: 39px;
+}
+
+.control-mark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: #ffffff;
+}
+
+.control-input[type="checkbox"]:checked + .control-mark::after {
+    position: absolute;
+    top: 6px;
+    left: 5px;
+    width: 12px;
+    height: 10px;
+    background-image: url(../images/catalog/tick.svg);
+    content: "";
+}
+
+.control-input[type="radio"] + .control-mark {
+    border-radius: 50%;
+}
+
+.control:hover .control-mark {
+    background: rgba(255, 255, 255, 0.6);
+    outline: none;
+}
+
+.control:active .control-mark {
+    background: rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+.control-input[type="radio"]:checked + .control-mark::after {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #3F5E72;
+    content: "";
+}
+
+.range-scale {
+    position: relative;
+    height: 4px;
+    margin-bottom: 16px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.range-bar {
+    position: absolute;
+    height: 4px;
+    background-color: #ffffff;
+} 
+
+.range-toggle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+.range-toggle:focus {
+    outline: 3px solid #83B3D3;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.range-toggle:active {
+    outline: 2px solid #83B3D3;
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.4);
+}
+
+.toggle-min {
+    top: -8px;
+    left: 0px;
+}
+  
+  .toggle-max {
+    top: -8px;
+    right: -10px;
+}
+
+.range-wrapper-inputs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 28px;
+}
+  
+.range-input {
+    display: block;
+    width: 143px;
+    margin: 0;
+    padding: 14px 0px 7px 15px;
+    font-family: PT Sans;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    background-color: transparent;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    appearance: textfield;
+}
+
+.range-input-from {
+    border-bottom-left-radius: 4px;
+    border-top-left-radius: 4px;
+    border-right: 1px;
+}
+
+.range-input-to {
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.range-input-from:focus,
+.range-input-to:focus {
+    box-shadow: inset 0px 0px 0px 3px #81B3D2, 0px 0px 0px 3px #81B3D2;
+    outline: none;
+}
+
+.range-input-from:hover,
+.range-input-to:hover {
+    border: 2px solid rgba(255, 255, 255, 0.6);
+}
+
+.range-input-from:active,
+.range-input-to:active {
+    background: #756257;
+    outline: 2px solid #FFFFFF;
+    border: none;
+    box-shadow: none;
+}
+
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
 .buttons-wrapper {
     width: 160px;
     margin-right: 73px;
-}
-.filters-group-title {
-    font-size: 20px;
-    line-height: 26px; 
-    font-weight: 700;
 }
 
 .search-wrapper {
@@ -975,9 +1153,9 @@ input[type="email"]:invalid {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    margin-left: 71px;
-    margin-right: 71px;
-    margin-bottom: 64px;
+    margin-left: 72px;
+    margin-right: 72px;
+    margin-bottom: 30px;
 }
 
 .hotels-title {
@@ -1018,11 +1196,12 @@ input[type="email"]:invalid {
 
 .hotels-description {
     grid-area: 4/2/5/3;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
 }
 
 .hotels-price {
     grid-area: 4/3/5/4;
+    padding-left: 18px;
 }
 
 .button-hotels-link {
@@ -1046,13 +1225,6 @@ input[type="email"]:invalid {
     background: #615048;
     color: rgba(255, 255, 255, 0.3);
     outline: none;
-}
-
-.button-hotels-link-favorite {
-    grid-area: 5/3/6/4;
-    margin-bottom: 16px;
-    padding-top: 9px;
-    padding-bottom: 10px;
 }
 
 .button-hotels-link-favorite:focus,
@@ -1093,6 +1265,8 @@ input[type="email"]:invalid {
 
 .stars {
     grid-area: 6/2/7/3;
+    display: flex;
+    padding-top: 8px;
 }
 
 .hotels-rate {
@@ -1101,8 +1275,8 @@ input[type="email"]:invalid {
     background-color: #F2F2F2;
     grid-area: 6/3/7/4;
     margin: 0;
-    padding-top: 9px;
-    padding-bottom: 10px;
+    padding: 7px 0 9px 33px;
+    text-transform: uppercase;
 }
 
 
@@ -1111,14 +1285,31 @@ input[type="email"]:invalid {
     display: inline-block;
     width: 18px;
     height: 17px;
+    background-repeat: no-repeat;
+    padding-top: 5px;
+    margin-right: 7px;
+}
+
+.button-container {
+    display: block;
+    margin: auto;
+    border: 1px solid #E6E6E6;
+    border-left: none;
+    border-right: none;
+    margin-bottom: 30px;
 }
 
 .button-hotels-link-more {
+    font-family: PT Sans, sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
     display: block;
     width: 620px;
     margin: 0 auto;
     text-align: center;
-    margin-bottom: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     padding-top: 17px;
     padding-bottom: 17px;
     border-radius: 4px;
@@ -1137,12 +1328,12 @@ input[type="email"]:invalid {
     display: flex;
     margin: 0;
     padding: 0;
-    margin-bottom: 90px;
+    margin-bottom: 74px;
 }
 
 .pagination-item:not(:last-child) {
     width: 55px;
-    margin-right: 7px;
+    margin-right: 8px;
 }
 
 .pagination-link:focus {
@@ -1167,21 +1358,30 @@ input[type="email"]:invalid {
     width: 386px;
     margin-left: auto;
     margin-right: 71px;
+    padding-top: 4px;
 }
 
 .select-control-number {
+    font-family: PT Sans;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
     width: 160px;
     margin: 0;
-    padding: 10px 10px;
+    padding: 8px 0 10px 12px;
     border: 2px solid #E6E6E6;
     box-sizing: border-box;
     border-radius: 4px;
     margin-left: 20px;
 }
 
+.select-hotels-number {
+    padding-right: 26px;
+}
+
 .pagination-link {
     display: block;
-    width: 55px;
+    min-width: 55px;
     height: 55px;
     text-align: center;
     font-weight: 700;
@@ -1189,6 +1389,9 @@ input[type="email"]:invalid {
     background-color: #83B3D3;
     text-decoration: none;
     border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .pagination-current {
@@ -1204,7 +1407,7 @@ input[type="email"]:invalid {
     text-transform: uppercase;
     text-align: center;
     margin: 0;
-    margin-bottom: 15px;
+    margin-bottom: 46px;
 }
 
 .subscribe-description-inner {
@@ -1212,13 +1415,13 @@ input[type="email"]:invalid {
     line-height: 26px;
     text-align: center;
     margin: 0;
-    margin-bottom: 26px;
+    margin-bottom: 44px;
 }
 
 .subscribe-wrapper-inner {
     display: grid;
     grid-template-columns: 600px 200px;
-    padding-bottom: 94px;
+    margin-bottom: 142px;
     justify-content: center;
     align-items: center;
 }
